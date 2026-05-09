@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+.checkout {
+  min-height: 100vh;
+  background: #F5F5F7;
+  padding: 60px 20px;
+}
+
+.checkout-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+}
+
+.checkout-form-section {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.checkout-form-section h2 {
+  font-size: 28px;
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.checkout-form-section h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  margin: 30px 0 20px;
+}
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.input-row input {
+  width: 100%;
+  padding: 16px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  color: #000;
+  background: white;
+  border: 1.5px solid #D2D2D7;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.input-row input::placeholder {
+  color: #86868B;
+}
+
+.input-row input:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.input-row input:hover {
+  border-color: #1D1D1F;
+}
+.payment-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.payment-group label {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  background: white;
+  border: 2px solid #D2D2D7;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.payment-group label:hover {
+  border-color: #000;
+  background: #F5F5F7;
+}
+
+.payment-group input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  cursor: pointer;
+  accent-color: #000;
+}
+
+.payment-group label:has(input:checked) {
+  border-color: #000;
+  background: #F5F5F7;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.05);
+}
+
+.btn {
+  width: 100%;
+  padding: 18px;
+  background: #FF2D55;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  background: #E02447;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 45, 85, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.checkout-summary {
+  background: white;
+  padding: 36px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.checkout-summary h3 {
+  font-size: 24px;
+  font-weight: 900;
+  color: #000;
+  margin-bottom: 24px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  background: #F5F5F7;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #000;
+}
+
+.summary-row span:last-child {
+  font-weight: 800;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  font-size: 18px;
+  color: #000;
+}
+
+.summary-total span {
+  font-weight: 700;
+}
+
+.summary-total strong {
+  font-size: 32px;
+  font-weight: 900;
+}
+
+@media (max-width: 1024px) {
+  .checkout-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-summary {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkout {
+    padding: 40px 16px;
+  }
+
+  .checkout-form-section,
+  .checkout-summary {
+    padding: 28px 24px;
+  }
+
+  .checkout-form-section h2 {
+    font-size: 24px;
+  }
+
+  .input-row {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-total strong {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout {
+    padding: 24px 12px;
+  }
+
+  .checkout-form-section,
+  .checkout-summary {
+    padding: 24px 20px;
+  }
+
+  .checkout-form-section h2 {
+    font-size: 22px;
+  }
+
+  .summary-total strong {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,373 @@
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.background-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.background-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  color: white;
+}
+
+
+.content-wrapper {
+  text-align: center;
+  max-width: 900px;
+  animation: fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.3s forwards;
+}
+
+.headline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin: 0 0 1.5rem 0;
+  text-transform: uppercase;
+}
+
+.line {
+  display: block;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.line:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.line:nth-child(2) {
+  animation-delay: 0.55s;
+}
+
+.subheadline {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.8s forwards;
+}
+
+.cta-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 1s forwards;
+}
+
+.cta-primary {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 1.25rem 3rem;
+  background: #ff2d55;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(255, 45, 85, 0.3);
+}
+
+.cta-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.cta-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255, 45, 85, 0.5);
+  background: #ff1744;
+}
+
+.cta-primary:hover::before {
+  left: 100%;
+}
+
+.cta-primary:active {
+  transform: translateY(0);
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta-primary:hover .arrow {
+  transform: translateX(5px);
+}
+
+
+.nav-bar,
+.nav-dir {
+  text-decoration: none;
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.brand-sec {
+  background-color: var(--white);
+  padding: 8rem 2rem; 
+  text-align: center;
+  border-top: 1px solid #f0f0f0;
+}
+
+.brand-conti {
+  max-width: 700px; 
+  height: 20;
+  margin: 0 auto;
+}
+.name{
+  color: #ff1744;
+}
+.brand-heading {
+  font-size: 0.85rem; 
+  text-transform: uppercase;
+  letter-spacing: 0.4em; 
+  color: var(--accent); 
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.brand-text {
+  font-size: 1.5rem; 
+  line-height: 1.6;
+  color: var(--primary); 
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  word-spacing: 0.05em;
+}
+
+.product-sec {
+  padding: 120px 8%;
+  background:#fff;
+}
+
+.product-cont {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.product-titilr {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.product-cont > a {
+  display: inline-block;
+  margin-bottom: 60px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #666;
+  transition: 0.3s ease;
+}
+
+.product-cont > a:hover {
+  color: #FF385C;
+  transform: translateX(-5px);
+}
+
+.product-show {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.product-card {
+  position: relative;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05) 
+}
+
+.product-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08) !important;
+}
+
+.product-dir {
+  text-decoration: none;
+  color: inherit;
+  background: transparent !important;
+  display: block;
+
+}
+
+.product-card img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05)
+}
+
+.product-info {
+  padding: 25px;
+  text-align: center;
+}
+
+.product-info h3:first-child {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+.product-info h3:nth-child(2) {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+}
+.view-bar {
+  grid-column: 1 / -1;     
+  display: flex;
+  justify-content: center;  
+  margin-top: 40px;
+  text-decoration: none;
+  background: transparent !important;
+}
+
+.view-group {
+  display: flex;
+  justify-content: center;
+}
+
+.view-primary {
+  padding: 14px 45px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  border: 2px solid #111;
+  background: transparent;
+  color: #111;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-primary:hover {
+  background: #111;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+  .product-show {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 0 1.5rem;
+  }
+
+  .headline {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .subheadline {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-primary {
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+}

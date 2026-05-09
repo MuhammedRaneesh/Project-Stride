@@ -1,0 +1,560 @@
+{
+  "users": [
+    {
+      "id": "daf9",
+      "username": "admin",
+      "role": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin1234"
+    },
+    {
+      "id": "d905",
+      "username": "raneesh",
+      "email": "raneeshramankulam@gmail.com",
+      "password": "raneesh1234",
+      "role": "user",
+      "status": "active"
+    },
+    {
+      "id": "f5a9",
+      "username": "thanseeha",
+      "email": "thansseha@gmail.com",
+      "password": "raneesh1234",
+      "role": "user",
+      "status": "active"
+    },
+    {
+      "id": "f0d7",
+      "username": "Anshif P",
+      "email": "anshif@gmail.com",
+      "password": "raneesh1234",
+      "role": "user",
+      "status": "active"
+    }
+  ],
+  "products": [
+    {
+      "id": "2",
+      "brand": "Nike",
+      "name": "Nike SuperRep Go Volt",
+      "category": "Running Shoes",
+      "price": 6299,
+      "sizes": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        6
+      ],
+      "colors": [
+        "Neon Green"
+      ],
+      "description": "High-performance training shoes with breathable mesh and responsive cushioning for workouts and running.",
+      "stock": 12,
+      "image": "/products/nike-superrep-go-green.png"
+    },
+    {
+      "id": "3",
+      "brand": "Nike",
+      "name": "Nike SuperRep Court Gold",
+      "category": "Training Shoes",
+      "price": 6999,
+      "sizes": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "colors": [
+        "Yellow"
+      ],
+      "description": "Nike SuperRep Court delivers stability and cushioning for high-intensity workouts and court training with a supportive upper and durable outsole.",
+      "stock": 14,
+      "image": "/products/nike-superrep-court-gold.jpg"
+    },
+    {
+      "id": "4",
+      "brand": "Adidas",
+      "name": "Adidas Forum Mid White",
+      "category": "Sneakers",
+      "price": 8999,
+      "sizes": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "colors": [
+        "White"
+      ],
+      "description": "Classic Adidas Forum Mid sneakers inspired by basketball heritage with a clean streetwear finish.",
+      "stock": 16,
+      "rating": 4.7,
+      "image": "/products/adidas-forum-mid-white.jpg"
+    },
+    {
+      "id": "5",
+      "brand": "Adidas",
+      "name": "Adidas Samba OG White",
+      "category": "Sneakers",
+      "price": 7999,
+      "mrp": 9999,
+      "sizes": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "colors": [
+        "White",
+        "Black"
+      ],
+      "description": "Timeless Adidas Samba OG sneakers with premium leather upper and classic gum sole for everyday comfort.",
+      "stock": 20,
+      "rating": 4.8,
+      "image": "/products/adidas-samba-og-white.jpg"
+    },
+    {
+      "id": "6",
+      "brand": "Puma",
+      "name": "PUMA BMW M Motorsport A3ROKART Mid",
+      "category": "Sneakers",
+      "price": 9499,
+      "sizes": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "colors": [
+        "Black",
+        "White",
+        "Blue"
+      ],
+      "description": "PUMA BMW M Motorsport A3ROKART Mid sneakers feature a motorsport-inspired design with a supportive mid-cut structure and durable rubber outsole.",
+      "stock": 12,
+      "rating": 4.6,
+      "image": "/products/pumabmwmotorsport.png"
+    },
+    {
+      "id": "7",
+      "brand": "Puma",
+      "name": "Puma Smash Perf White",
+      "category": "Sneakers",
+      "price": 3999,
+      "sizes": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "colors": [
+        "White"
+      ],
+      "description": "Puma Smash Perf sneakers feature a clean perforated synthetic leather upper with a durable rubber outsole, offering everyday comfort and classic style.",
+      "stock": 25,
+      "rating": 4.4,
+      "image": "/products/pumawhite.png"
+    },
+    {
+      "id": "8",
+      "brand": "New Balance",
+      "name": "New Balance 9060 Sea Salt Raincloud",
+      "category": "Sneakers",
+      "price": 17999,
+      "mrp": 21999,
+      "sizes": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "colors": [
+        "Sea Salt"
+      ],
+      "description": "Futuristic 9060 silhouette featuring a premium pigskin suede and mesh upper with advanced ABZORB and SBS cushioning for a chunky Y2K-inspired look.",
+      "stock": 15,
+      "rating": 4.7,
+      "image": "/products/new-balance-9060-sea-salt.png"
+    },
+    {
+      "id": "f7c6",
+      "brand": "Nike",
+      "name": "NIKE AIR FORCE 1 '07 NN",
+      "category": "sneakers",
+      "price": "12000",
+      "sizes": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "description": "The Nike Air Force 1 '07 Next Nature brings the iconic hoops style you love into a new era. Crafted with at least 20% recycled materials by weight, this \"Next Nature\" edition preserves the classic triple-white aesthetic while reducing its environmental footprint. Featuring crisp synthetic overlays, a padded collar, and the legendary Nike Air cushioning, it offers the perfect blend of comfort and durability.",
+      "image": "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/b/b/bb0549fNike-IR0817-100_1.jpg?rnd=20200526195200&tr=w-1080"
+    },
+    {
+      "id": "779d",
+      "brand": "Nike",
+      "name": "Nike Vomero Plus",
+      "category": "sneakers",
+      "price": "15294",
+      "sizes": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "description": "Elevate your daily miles with the Nike Vomero Plus. Designed for runners who demand the highest level of impact protection, the Vomero Plus features a massive 45mm stack of 100% ZoomX foam. This isn't just soft—it's responsive. Every stride absorbs the shock of the road and returns that energy to your next step, making long distances feel shorter and recovery runs feel like a breeze.",
+      "image": "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/9/f/9fe448dNike-IO4482-002_1.jpg?rnd=20200526195200&tr=w-1536"
+    },
+    {
+      "id": "5c6a",
+      "brand": "New Balance",
+      "name": "New Balance 550",
+      "category": "sneakers",
+      "price": "12000",
+      "sizes": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "description": "The New Balance 550 is a stylish, retro-inspired sneaker that originally debuted as a basketball shoe in 1989. It features a chunky yet clean low-top design, usually crafted from premium perforated leather with a signature small \"N\" logo on the side. While it’s built with a sturdy rubber sole and a foam midsole for daily comfort, it is primarily worn today as a versatile fashion staple that pairs well with everything from jeans to gym wear. In 2026, it remains one of the most popular \"vintage-vibe\" sneakers on the market due to its durable build and timeless, old-school athletic aesthetic.",
+      "image": "https://nb.scene7.com/is/image/NB/bb550pb1_nb_03_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"
+    },
+    {
+      "id": "2eed",
+      "brand": "Puma",
+      "name": "Ferrari Neo Cat 2.0 Sneakers",
+      "category": "sneakers",
+      "price": "3519",
+      "sizes": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "description": "traight from the motorsport archive, the Ferrari Neo Cat 2.0 brings track-inspired flair to your everyday rotation. Designed with a clean synthetic leather upper and low-profile silhouette, it mirrors the sleek lines of Ferrari performance. Whether you're a die-hard fan or just appreciate the edge of automotive style, this shoe keeps your look fast and refined.\n\nStyle: 309235_01\nColor: PUMA Black-PUMA White",
+      "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/309235/01/sv01/fnd/IND/fmt/png/Ferrari-Neo-Cat-2.0-Sneakers"
+    },
+    {
+      "id": "7068",
+      "brand": "Nike",
+      "name": "Nike Quest 6",
+      "category": "sneakers",
+      "price": "7200",
+      "sizes": [
+        8,
+        11,
+        10,
+        9,
+        7
+      ],
+      "description": "The Nike Quest 6 is for runners of all levels. But make no mistake, it's anything but entry level. A super-comfortable and supportive midfoot fit band helps keep you stable for your miles. Plus, a super-soft midsole foam helps cushion each step.",
+      "image": "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/5/3/5324c8eNike-FD6033-110_1.jpg?rnd=20200526195200&tr=w-1080"
+    }
+  ],
+  "cart": [
+    {
+      "id": "96ff",
+      "productId": "d905",
+      "name": "Nike SuperRep Go Volt",
+      "price": 6299,
+      "image": "/products/nike-superrep-go-green.png",
+      "size": 7,
+      "quantity": 5
+    },
+    {
+      "id": "f51e",
+      "userId": "daf9",
+      "productId": "3",
+      "name": "Nike SuperRep Court Gold",
+      "price": 6999,
+      "image": "/products/nike-superrep-court-gold.jpg",
+      "size": 6,
+      "quantity": 1
+    },
+    {
+      "id": "6af5",
+      "userId": "d905",
+      "productId": "3",
+      "name": "Nike SuperRep Court Gold",
+      "price": 6999,
+      "image": "/products/nike-superrep-court-gold.jpg",
+      "size": 6,
+      "quantity": 1
+    },
+    {
+      "id": "150c",
+      "userId": "d905",
+      "productId": "3",
+      "name": "Nike SuperRep Court Gold",
+      "price": 6999,
+      "image": "/products/nike-superrep-court-gold.jpg",
+      "size": 7,
+      "quantity": 1
+    }
+  ],
+  "orders": [
+    {
+      "id": "ba87",
+      "userId": "d905",
+      "items": [
+        {
+          "id": "b6bd",
+          "userId": "d905",
+          "productId": "2",
+          "name": "Nike SuperRep Go Volt",
+          "price": 6299,
+          "image": "/products/nike-superrep-go-green.png",
+          "size": 9,
+          "quantity": 6
+        },
+        {
+          "id": "b981",
+          "userId": "d905",
+          "productId": "8",
+          "name": "New Balance 9060 Sea Salt Raincloud",
+          "price": 17999,
+          "image": "/products/new-balance-9060-sea-salt.png",
+          "size": 10,
+          "quantity": 10
+        }
+      ],
+      "totalAmount": 217784,
+      "shippingDetails": {
+        "fullName": "raneesh",
+        "phone": "8547911083",
+        "email": "raneeshramankulam@gmail.com",
+        "address": "ramnakulam",
+        "city": "manjeri",
+        "pincode": "676123"
+      },
+      "payment": "Google Pay",
+      "orderDate": "13/02/2026, 21:02:51",
+      "status": "Confirmed"
+    },
+    {
+      "id": "bdef",
+      "userId": "f5a9",
+      "items": [
+        {
+          "id": "ce35",
+          "userId": "f5a9",
+          "productId": "8",
+          "name": "New Balance 9060 Sea Salt Raincloud",
+          "price": 17999,
+          "image": "/products/new-balance-9060-sea-salt.png",
+          "size": 9,
+          "quantity": 5
+        },
+        {
+          "id": "efcf",
+          "userId": "f5a9",
+          "productId": "4",
+          "name": "Adidas Forum Mid White",
+          "price": 8999,
+          "image": "/products/adidas-forum-mid-white.jpg",
+          "size": 8,
+          "quantity": 5
+        }
+      ],
+      "totalAmount": 134990,
+      "shippingDetails": {
+        "fullName": "thanseeha",
+        "phone": "8943379345",
+        "email": "thansseha@gmail.com",
+        "address": "edvanna",
+        "city": "manjeri",
+        "pincode": "23145"
+      },
+      "payment": "Google Pay",
+      "orderDate": "13/02/2026, 21:03:52",
+      "status": "Processing"
+    },
+    {
+      "id": "606e",
+      "userId": "f0d7",
+      "items": [
+        {
+          "id": "2b4a",
+          "userId": "f0d7",
+          "productId": "8",
+          "name": "New Balance 9060 Sea Salt Raincloud",
+          "price": 17999,
+          "image": "/products/new-balance-9060-sea-salt.png",
+          "size": 9,
+          "quantity": 5
+        }
+      ],
+      "totalAmount": 89995,
+      "shippingDetails": {
+        "fullName": "anshif",
+        "phone": "8943379345",
+        "email": "anshif@gmail.com",
+        "address": "edvanna",
+        "city": "mqn",
+        "pincode": "23145"
+      },
+      "payment": "PhonePe",
+      "orderDate": "13/02/2026, 21:05:01",
+      "status": "Cancelled"
+    },
+    {
+      "id": "2121",
+      "userId": "d905",
+      "items": [
+        {
+          "id": "0f93",
+          "userId": "d905",
+          "productId": "3",
+          "name": "Nike SuperRep Court Gold",
+          "price": 6999,
+          "image": "/products/nike-superrep-court-gold.jpg",
+          "size": 8,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 6999,
+      "shippingDetails": {
+        "fullName": "raneesh",
+        "phone": "8943379345",
+        "email": "raneesh@gmail.com",
+        "address": "edvanna",
+        "city": "manjeri",
+        "pincode": "676123"
+      },
+      "payment": "Google Pay",
+      "orderDate": "14/02/2026, 10:24:11",
+      "status": "Confirmed"
+    },
+    {
+      "id": "9883",
+      "userId": "d905",
+      "items": [
+        {
+          "id": "33b2",
+          "userId": "d905",
+          "productId": "3",
+          "name": "Nike SuperRep Court Gold",
+          "price": 6999,
+          "image": "/products/nike-superrep-court-gold.jpg",
+          "size": 7,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 6999,
+      "shippingDetails": {
+        "fullName": "raneesh",
+        "phone": "8547911083",
+        "email": "raneeshramankulam@gmail.com",
+        "address": "ramnakulam",
+        "city": "manjeri",
+        "pincode": "676123"
+      },
+      "payment": "COD",
+      "orderDate": "14/02/2026, 20:42:13",
+      "status": "Shipped"
+    },
+    {
+      "id": "de47",
+      "userId": "d905",
+      "items": [
+        {
+          "id": "f0c3",
+          "userId": "d905",
+          "productId": "3",
+          "name": "Nike SuperRep Court Gold",
+          "price": 6999,
+          "image": "/products/nike-superrep-court-gold.jpg",
+          "size": 7,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 6999,
+      "shippingDetails": {
+        "fullName": "raneesh",
+        "phone": "8547911083",
+        "email": "raneeshramankulam@gmail.com",
+        "address": "ramnakulam",
+        "city": "manjeri",
+        "pincode": "23145"
+      },
+      "payment": "Google Pay",
+      "orderDate": "14/02/2026, 21:44:18",
+      "status": "Confirmed"
+    },
+    {
+      "id": "58a4",
+      "userId": "d905",
+      "items": [
+        {
+          "id": "2209",
+          "userId": "d905",
+          "productId": "2eed",
+          "name": "Ferrari Neo Cat 2.0 Sneakers",
+          "price": "3519",
+          "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_750,h_750/global/309235/01/sv01/fnd/IND/fmt/png/Ferrari-Neo-Cat-2.0-Sneakers",
+          "size": 7,
+          "quantity": 2
+        }
+      ],
+      "totalAmount": 7038,
+      "shippingDetails": {
+        "fullName": "raneesh",
+        "phone": "8547911083",
+        "email": "raneeshramankulam@gmail.com",
+        "address": "ramnakulam",
+        "city": "manjeri",
+        "pincode": "676123"
+      },
+      "payment": "Google Pay",
+      "orderDate": "14/02/2026, 21:48:36",
+      "status": "Confirmed"
+    },
+    {
+      "id": "023f",
+      "userId": "d905",
+      "items": [
+        {
+          "id": "00c4",
+          "userId": "d905",
+          "productId": "3",
+          "name": "Nike SuperRep Court Gold",
+          "price": 6999,
+          "image": "/products/nike-superrep-court-gold.jpg",
+          "size": 10,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 6999,
+      "shippingDetails": {
+        "fullName": "raneesh",
+        "phone": "8547911083",
+        "email": "raneeshramankulam@gmail.com",
+        "address": "ramnakulam",
+        "city": "manjeri",
+        "pincode": "676123"
+      },
+      "payment": "COD",
+      "orderDate": "27/02/2026, 15:34:58",
+      "status": "Confirmed"
+    }
+  ]
+}

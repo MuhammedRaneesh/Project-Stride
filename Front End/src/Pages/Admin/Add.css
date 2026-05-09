@@ -1,0 +1,140 @@
+
+.add-page {
+  padding: 40px 20px;
+  background-color: var(--stride-bg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Inter', sans-serif;
+}
+
+.add-card {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 650px;
+  box-shadow: var(--stride-shadow);
+}
+
+.add-title {
+  color: var(--stride-dark);
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  border-left: 6px solid var(--stride-red);
+  padding-left: 15px;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #444;
+  font-size: 14px;
+}
+
+.form-input, 
+.form-textarea {
+  padding: 12px 16px;
+  border: 1.5px solid #eee;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.form-input:focus, 
+.form-textarea:focus {
+  border-color: var(--stride-red);
+  box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.1);
+}
+
+.form-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.sizes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 5px;
+}
+
+.size-chip {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  border: 1.5px solid #eee;
+  border-radius: 10px;
+  font-weight: 700;
+  color: var(--stride-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.size-chip:hover {
+  border-color: #ccc;
+  background-color: #f9f9f9;
+}
+
+.size-chip.active {
+  background-color: var(--stride-red);
+  color: white;
+  border-color: var(--stride-red);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+}
+
+.submit-btn {
+  margin-top: 20px;
+  background-color: var(--stride-red);
+  color: white;
+  border: none;
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+  background-color: #c92c37;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(230, 57, 70, 0.3);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
