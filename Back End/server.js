@@ -16,10 +16,24 @@ connectDb() ;
 connectCloud()
 const app = express()
 
+app.set("trust proxy", 1);
+
+const allowedOrigins = [
+    process.env.FRONTEND_URL,
+    process.env.FRONTEND_URL?.replace(/\/$/, ""),
+    "http://localhost:5173",
+    "http://localhost:3000",
+].filter(Boolean);
+
 app.use(cors({
-    origin : process.env.FRONTEND_URL ,
-    methods : ["GET", "POST", "PUT", "DELETE","PATCH"],
-    credentials : true ,
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin) || allowedOrigins.includes(origin.replace(/\/$/, ""))) {
+            return callback(null, true);
+        }
+        return callback(null, false);
+    },
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
+    credentials: true,
 }))
 
 app.use(cookieParser())
@@ -35,9 +49,9 @@ app.use("/api/order" , orderRoutes )
 app.use("/api/admin" , adminRoutes )
 
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 4001;
 
 app.listen(PORT, () => {
-    console.log(`server is running ${PORT}`)
+    console.log(`server is running on port ${PORT}`)
 })
 

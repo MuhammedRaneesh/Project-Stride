@@ -1,6 +1,7 @@
 import User from "../../models/User.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken"
+import { getCookieOptions } from "../../utils/cookieOptions.js";
 
 
 export const adminLogin = async (req, res) => {
@@ -39,12 +40,7 @@ export const adminLogin = async (req, res) => {
 
         const token = jwt.sign({ id: admin._id, role: admin.role }, process.env.JWT_SECRET, { expiresIn: '14d' })
 
-        res.cookie("token", token, {
-            httpOnly: true,
-            secure: false,
-            sameSite: "lax",
-            maxAge: 14 * 24 * 60 * 60 * 1000,
-        })
+        res.cookie("token", token, getCookieOptions());
 
         res.json({
             message: "Login successful",
