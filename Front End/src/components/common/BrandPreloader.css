@@ -1,0 +1,199 @@
+/* ==========================================================================
+   Brand Preloader Screen Styles — Street-Luxe Curtain Reveal
+   ========================================================================== */
+
+.brand-preloader-curtain {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #050505;
+  color: #ffffff;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 3.5rem;
+  user-select: none;
+  cursor: default;
+  overflow: hidden;
+}
+
+/* Subtle radial glow background */
+.brand-preloader-curtain::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(255, 45, 85, 0.08) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Skip Button */
+.preloader-skip-btn {
+  align-self: flex-end;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 2;
+}
+
+.preloader-skip-btn:hover {
+  color: #ffffff;
+  border-color: #ff2d55;
+  background: rgba(255, 45, 85, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Center Content */
+.preloader-center-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto 0;
+}
+
+.preloader-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #ff2d55;
+  margin-bottom: 1.2rem;
+}
+
+.preloader-title {
+  font-size: clamp(3.5rem, 11vw, 7.5rem);
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.preloader-letter {
+  display: inline-block;
+  color: #ffffff;
+}
+
+.preloader-dot {
+  display: inline-block;
+  color: #ff2d55;
+  margin-left: 0.05em;
+}
+
+.preloader-tagline {
+  font-size: clamp(0.75rem, 1.8vw, 0.95rem);
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 1.2rem 0 2.5rem 0;
+}
+
+/* Progress Box */
+.preloader-progress-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  width: 280px;
+  max-width: 80vw;
+}
+
+.preloader-counter {
+  font-family: "Courier New", Courier, monospace, -apple-system, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  display: flex;
+  align-items: baseline;
+  font-variant-numeric: tabular-nums;
+}
+
+.counter-num {
+  display: inline-block;
+  min-width: 2.2ch;
+  text-align: right;
+}
+
+.counter-symbol {
+  font-size: 0.85rem;
+  color: #ff2d55;
+  margin-left: 2px;
+}
+
+.preloader-track {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.preloader-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff2d55, #ffffff);
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(255, 45, 85, 0.6);
+  transition: width 0.05s linear;
+}
+
+/* Bottom Watermark */
+.preloader-watermark {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  z-index: 2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .brand-preloader-curtain {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .preloader-title {
+    font-size: clamp(2.8rem, 14vw, 4.2rem);
+    letter-spacing: 0.12em;
+  }
+
+  .preloader-tagline {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 2rem;
+  }
+
+  .preloader-watermark {
+    flex-direction: column;
+    gap: 0.4rem;
+    text-align: center;
+  }
+}

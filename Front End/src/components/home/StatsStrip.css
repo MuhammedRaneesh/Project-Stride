@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Stats Strip Section Styles
+   ========================================================================== */
+
+.stats-strip-section {
+  width: 100%;
+  background-color: #0a0a0a;
+  padding: 4.8rem 8%;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stats-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  text-align: center;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-value {
+  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-weight: 900;
+  color: #ff2d55;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+  font-feature-settings: "tnum";
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-strip-section {
+    padding: 3.8rem 1.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+  }
+}

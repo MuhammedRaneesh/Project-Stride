@@ -9,20 +9,24 @@ export const getAllProducts = async (req, res) => {
 
         const filter = { isDeleted: { $ne: true } }
 
-        if (brand) {
-            filter.brand = brand;
+        if (brand && brand !== "ALL") {
+            const cleanBrand = brand.replace(/-/g, " ").trim();
+            filter.brand = { $regex: new RegExp(`^${cleanBrand}$`, "i") };
         }
 
-        if (category) {
-            filter.category = category;
+        if (category && category !== "ALL") {
+            const cleanCat = category.replace(/-/g, " ").trim();
+            filter.category = { $regex: new RegExp(cleanCat, "i") };
         }
 
         if (keyword && keyword.trim()) {
+            const cleanKey = keyword.trim();
             filter.$or = [
-                { name: { $regex: keyword.trim(), $options: "i" } },
-                { brand: { $regex: keyword.trim(), $options: "i" } },
-                { category: { $regex: keyword.trim(), $options: "i" } }
-            ]
+                { name: { $regex: cleanKey, $options: "i" } },
+                { brand: { $regex: cleanKey, $options: "i" } },
+                { category: { $regex: cleanKey, $options: "i" } },
+                { description: { $regex: cleanKey, $options: "i" } }
+            ];
         }
 
         const totalProducts = await Product.countDocuments(filter)

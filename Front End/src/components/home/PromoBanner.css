@@ -1,0 +1,110 @@
+/* ==========================================================================
+   Promo Banner Section Styles
+   ========================================================================== */
+
+.promo-banner-section {
+  position: relative;
+  width: 100%;
+  padding: 7rem 8%;
+  background: radial-gradient(circle at 85% 50%, #2b0813 0%, #0d0205 45%, #050505 100%);
+  overflow: hidden;
+  color: #ffffff;
+  border-top: 1px solid rgba(255, 45, 85, 0.2);
+  border-bottom: 1px solid rgba(255, 45, 85, 0.2);
+}
+
+/* Giant background outlined STRIDE text */
+.promo-bg-text {
+  position: absolute;
+  top: 15%;
+  right: -5%;
+  font-size: clamp(8rem, 24vw, 22rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(255, 45, 85, 0.18);
+  user-select: none;
+  pointer-events: none;
+  line-height: 0.85;
+  will-change: transform;
+}
+
+.promo-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.promo-content {
+  max-width: 620px;
+}
+
+.promo-eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #ff2d55;
+  margin-bottom: 1.2rem;
+}
+
+.promo-heading {
+  font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+  font-weight: 900;
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0 0 1.5rem 0;
+}
+
+.promo-description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+
+/* White pill button */
+.promo-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 1.1rem 2.8rem;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.promo-pill-btn:hover {
+  background-color: #ff2d55;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(255, 45, 85, 0.45);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .promo-banner-section {
+    padding: 4.8rem 1.5rem;
+  }
+
+  .promo-bg-text {
+    right: -20%;
+    top: 35%;
+  }
+
+  .promo-pill-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

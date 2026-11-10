@@ -1,0 +1,198 @@
+/* ==========================================================================
+   Brand Strip Stylesheet
+   Theme: bold, street-style, minimal (#ff2d55 accent, outlined typography)
+   ========================================================================== */
+
+.brand-strip-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 1.5rem 0 2rem 0;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+/* Dark variant option */
+.brand-strip-section.dark {
+  background-color: #000000;
+}
+
+/* Centered label above marquee */
+.brand-strip-label {
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #ff2d55;
+  margin-bottom: 0.9rem;
+}
+
+/* Slim band with top/bottom borders */
+.brand-strip-band {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 1.2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: relative;
+}
+
+.brand-strip-section.dark .brand-strip-band {
+  border-top-color: rgba(255, 255, 255, 0.12);
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Row with edge fade-out mask */
+.brand-strip-row {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+}
+
+/* Marquee track group */
+.brand-strip-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  animation: brandMarquee 40s linear infinite;
+  will-change: transform;
+}
+
+.brand-strip-group.reverse {
+  animation: brandMarqueeReverse 40s linear infinite;
+}
+
+/* Pause marquee on hover */
+.brand-strip-band:hover .brand-strip-group {
+  animation-play-state: paused;
+}
+
+/* Individual item with dot */
+.brand-strip-item-wrapper {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Outlined brand text link */
+.brand-strip-link {
+  font-size: 2.3rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #000000;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-block;
+  line-height: 1;
+  transition: color 0.25s ease, -webkit-text-stroke 0.25s ease, transform 0.2s ease;
+}
+
+.brand-strip-section.dark .brand-strip-link {
+  -webkit-text-stroke: 1.5px #ffffff;
+}
+
+.brand-strip-link:hover {
+  color: #ff2d55;
+  -webkit-text-stroke: 1.5px #ff2d55;
+}
+
+.brand-strip-link:focus-visible {
+  color: #ff2d55;
+  -webkit-text-stroke: 1.5px #ff2d55;
+  outline: 2px solid #ff2d55;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* Notes between brand names */
+.brand-strip-note {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.45);
+  white-space: nowrap;
+  user-select: none;
+}
+
+.brand-strip-section.dark .brand-strip-note {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Small pink dot separator */
+.brand-strip-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ff2d55;
+  display: inline-block;
+  margin: 0 2rem;
+  flex-shrink: 0;
+}
+
+/* Marquee animations */
+@keyframes brandMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes brandMarqueeReverse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .brand-strip-link {
+    font-size: 1.5rem;
+    letter-spacing: 0.12em;
+    -webkit-text-stroke-width: 1.2px;
+  }
+
+  .brand-strip-note {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+  }
+
+  .brand-strip-dot {
+    margin: 0 1.25rem;
+    width: 4px;
+    height: 4px;
+  }
+
+  .brand-strip-group,
+  .brand-strip-group.reverse {
+    animation-duration: 25s;
+  }
+}
+
+/* Accessibility: manual scroll when reduced motion requested */
+@media (prefers-reduced-motion: reduce) {
+  .brand-strip-row {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .brand-strip-group {
+    animation: none !important;
+  }
+}

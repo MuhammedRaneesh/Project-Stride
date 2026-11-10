@@ -4,13 +4,16 @@ import App from './App.jsx'
 import "./index.css"
 import { Authprovider } from './Context/AuthContext.jsx'
 import { CartProvider } from './Context/CartContex.jsx'
+import { WishlistProvider } from './Context/WishlistContext.jsx'
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Authprovider>
       <CartProvider>
-        <App />
+        <WishlistProvider>
+          <App />
+        </WishlistProvider>
       </CartProvider>
     </Authprovider>
   </StrictMode>,
-
 )

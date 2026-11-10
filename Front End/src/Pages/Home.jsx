@@ -1,94 +1,37 @@
 import Navbar from "../components/common/Navbar";
+import Hero from "../components/home/Hero";
+import Philosophy from "../components/home/Philosophy";
+import BrandStrip from "../components/common/BrandStrip";
+import LatestDrops from "../components/home/LatestDrops";
+import ShopByCategory from "../components/home/ShopByCategory";
+import StatsStrip from "../components/home/StatsStrip";
+import PromoBanner from "../components/home/PromoBanner";
+import WhyStride from "../components/home/WhyStride";
+import Reviews from "../components/home/Reviews";
+import Newsletter from "../components/home/Newsletter";
 import Footer from "../components/common/Footer";
-import { useState, useEffect } from "react";
-import api from "../api/axios";
-import { NavLink, Link } from "react-router-dom";
-import "./Home.css"
 
 function Home() {
-  const [product, setProduct] = useState([]);
-
-  useEffect(() => {
-    api.get("/products")
-      .then((res) => setProduct(res.data.products))
-      .catch((error) => console.log("failled", error))
-  }, []);
-
   return (
-    <div>
+    <div className="home-page-wrapper">
+      {/* Navigation */}
       <Navbar />
-      <div className="hero-section">
 
-        <div className="background-container">
-          <video autoPlay loop muted playsInline className="background-video">
-            <source
-              src="/coverr-sneakers-on-a-step-machine-6641-1080p.mp4"
-              type="video/mp4"
-            />
-          </video>
-          
-        </div>
+      {/* Main Home Page Content Sections */}
+      <main id="main-content">
+        <Hero />
+        <Philosophy />
+        <BrandStrip />
+        <LatestDrops />
+        <ShopByCategory />
+        <StatsStrip />
+        <PromoBanner />
+        <WhyStride />
+        <Reviews />
+        <Newsletter />
+      </main>
 
-        <div className="hero-content">
-          <div className="content-wrapper">
-            <span className="eyebrow">STRIDE</span>
-            <h1 className="headline">
-              <span className="line">Step Into</span>
-              <span className="line">Tomorrow</span>
-            </h1>
-            <p className="subheadline">
-              Where innovation meets street culture. Discover the future of footwear.
-            </p>
-            <NavLink to={"/shop"} className="nav-bar">
-              <div className="cta-group">
-                <button className="cta-primary">
-                  Explore Collection
-                  <span className="arrow">→</span>
-                </button>
-              </div>
-            </NavLink>
-          </div>
-        </div>
-      </div>
-      <div className="brand-sec">
-        <div className="brand-conti">
-          <h2 className="brand-heading">Our Philosophy</h2>
-
-          <p className="brand-text">
-            <span className="name">STRIDE</span> blends luxury with street energy.
-            Crafted for those who move fast, think bold, and refuse limits.
-            Every step is power. Every stride is identity.
-          </p>
-        </div>
-      </div>
-      <div className="product-sec">
-        <div className="product-cont">
-          <h2 className="product-titilr">LATEST DROPS</h2>
-
-          <div className="product-show">
-            {product.slice(-6).map((item) => (
-              <div className="product-card" key={item._id}>
-                <Link to={`/shop/${item._id}`} className="product-dir">
-                  <img src={item.image} alt="item.name" />
-                  <div className="product-info">
-                    <h3>{item.brand}</h3>
-                    <h3>{item.name}</h3>
-                    <p>₹{item.price}</p>
-                  </div>
-                </Link>
-              </div>
-            ))}
-            <NavLink to={"/shop"} className="view-bar">
-              <div className="view-group">
-                <button className="view-primary">
-                  View All Collection →
-                </button>
-              </div>
-            </NavLink>
-          </div>
-        </div>
-      </div>
-
+      {/* Footer with Back to Top */}
       <Footer />
     </div>
   );

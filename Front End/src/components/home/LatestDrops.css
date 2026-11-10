@@ -1,0 +1,296 @@
+/* ==========================================================================
+   Latest Drops — Clean Classic STRIDE Style (Old-Type UI)
+   ========================================================================== */
+
+.old-drops-section {
+  padding: 6.5rem 8%;
+  background-color: #ffffff;
+}
+
+.old-drops-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.old-drops-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.old-drops-eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: #ff2d55;
+  margin-bottom: 0.5rem;
+}
+
+.old-drops-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+}
+
+/* Error State */
+.old-drops-error {
+  text-align: center;
+  padding: 3rem;
+  background-color: #fafafa;
+  border-radius: 12px;
+  margin-bottom: 3rem;
+}
+
+.old-drops-error p {
+  color: #666666;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.old-retry-btn {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 0.7rem 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.old-retry-btn:hover {
+  background-color: #ff2d55;
+}
+
+/* Grid */
+.old-drops-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem;
+  margin-bottom: 3.5rem;
+}
+
+/* Classic Clean Card */
+.old-product-card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), box-shadow 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), border-color 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.old-product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.09);
+  border-color: #e2e2e2;
+}
+
+.old-product-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Wishlist Button */
+.old-wishlist-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 5;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(4px);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.old-wishlist-btn:hover {
+  transform: scale(1.1);
+  background: #ffffff;
+}
+
+.old-heart-icon {
+  font-size: 0.95rem;
+  color: #777777;
+  transition: color 0.2s ease;
+}
+
+.old-heart-icon.filled {
+  color: #ff2d55;
+}
+
+/* Image Box */
+.old-image-box {
+  width: 100%;
+  height: 300px;
+  background-color: #f7f7f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 1.5rem;
+}
+
+.old-product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.45s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.old-product-card:hover .old-product-img {
+  transform: scale(1.06);
+}
+
+/* Product Info (Centered) */
+.old-product-info {
+  padding: 1.5rem 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.old-product-brand {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #888888;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.old-product-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 10px 0;
+  line-height: 1.35;
+  min-height: 2.7rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.old-product-price {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #111111;
+  margin: 0;
+  margin-top: auto;
+}
+
+/* Skeleton Shimmer */
+.old-skeleton-card {
+  pointer-events: none;
+}
+
+.old-skeleton-img {
+  height: 300px;
+  background-color: #f0f0f0;
+}
+
+.old-skeleton-line {
+  height: 14px;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  margin: 0.8rem auto 0.4rem auto;
+}
+
+.old-skeleton-line.short {
+  width: 35%;
+}
+
+.old-skeleton-line.medium {
+  width: 70%;
+}
+
+.old-skeleton-line.tiny {
+  width: 30%;
+  margin-bottom: 1rem;
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e8e8e8 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: oldShimmer 1.5s infinite;
+}
+
+@keyframes oldShimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* View All Collection Button */
+.old-view-all-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.old-view-all-btn {
+  padding: 14px 45px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  border: 2px solid #111111;
+  background: transparent;
+  color: #111111;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.old-view-all-btn:hover {
+  background-color: #111111;
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .old-drops-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .old-drops-section {
+    padding: 4.5rem 1.25rem;
+  }
+
+  .old-drops-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .old-image-box {
+    height: 250px;
+  }
+}

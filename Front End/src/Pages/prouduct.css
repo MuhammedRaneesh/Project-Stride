@@ -244,6 +244,36 @@
   transform: translateY(0);
 }
 
+.details-wishlist-btn {
+  padding: 16px 0;
+  background: var(--white);
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.details-wishlist-btn:hover {
+  background: #f7f7f8;
+  border-color: #ff2d55;
+  color: #ff2d55;
+  transform: translateY(-1px);
+}
+
+.details-wishlist-btn.active {
+  border-color: #ff2d55;
+  color: #ff2d55;
+  background: rgba(255, 45, 85, 0.05);
+}
+
 .loading {
   min-height: 80vh;
   display: grid;
